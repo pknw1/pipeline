@@ -1,9 +1,15 @@
 pipeline {
   agent none
   stages {
-    stage('error') {
+    stage('hello') {
       steps {
-        echo 'hello'
+        echo '2'
+        echo '7'
+      }
+    }
+    stage('') {
+      steps {
+        input(message: 'test', id: '`1', ok: '888')
       }
     }
   }
