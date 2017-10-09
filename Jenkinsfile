@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'master'
+    }
+    
+  }
   stages {
     stage('hello') {
       steps {
@@ -7,7 +12,7 @@ pipeline {
         echo '7'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         input(message: 'test', id: '`1', ok: '888')
       }
