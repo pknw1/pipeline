@@ -12,9 +12,14 @@ pipeline {
         echo '7'
       }
     }
-    stage('error') {
+    stage('input') {
       steps {
         input(message: 'test', id: '`1', ok: '888')
+      }
+    }
+    stage('file') {
+      steps {
+        touch 'test.zip'
       }
     }
   }
